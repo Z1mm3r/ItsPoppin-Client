@@ -13,9 +13,10 @@ import Input from '@material-ui/core/Input';
 
 import DefaultContent from './MainContentComponents/DefaultContent'
 import SearchContent from './MainContentComponents/SearchContent'
+import EditProfile from './MainContentComponents/EditProfile.js'
 
 
-export default class SignIn extends Component {
+export default class MainContent extends Component {
 
 
   state = {
@@ -30,7 +31,8 @@ export default class SignIn extends Component {
     return (
       <>
         {this.state.openTab == "DEFAULT" ? <DefaultContent setTab = {this.setTab} /> : null }
-        {this.state.openTab == "SEARCH" ? <SearchContent token = {this.props.token} setTab = {this.setTab} /> : null}
+        {this.state.openTab == "SEARCH" ? <SearchContent userId = {this.props.userId} currentVisit = {this.props.currentVisit} checkedIn={this.props.checkedIn} checkedOut={this.props.checkedOut} token = {this.props.token} setTab = {this.setTab} /> : null}
+        {this.state.openTab == "EDIT" ? <EditProfile token = {this.props.token} userId = {this.props.userId}/ > : null}
       </>
     )
   }

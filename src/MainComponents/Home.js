@@ -15,7 +15,7 @@ import Input from '@material-ui/core/Input';
 
 import API_URL from '../Constants/backend_url.js'
 
-export default class SignIn extends Component {
+export default class Home extends Component {
 
   render() {
     return (
@@ -28,7 +28,7 @@ export default class SignIn extends Component {
       >
 
         <Grid item xs = {7}>
-          <MainContent token = {this.props.token}/>
+          <MainContent userId = {this.props.userId} currentVisit = {this.props.currentVisit} checkedIn={this.props.checkedIn} checkedOut={this.props.checkedOut} signedOut={this.props.signedOut} token = {this.props.token}/>
         </Grid>
         <Grid item xs = {2}>
           <Paper style={{minWidth:"80vh"}, {minHeight:"80vh"}}> Friends </Paper>

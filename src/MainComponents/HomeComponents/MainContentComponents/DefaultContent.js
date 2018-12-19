@@ -25,16 +25,21 @@ export default class DefaultContent extends Component {
           justify="center"
           spacing={24}
           style={{minWidth:"50vh"}, {minHeight:"50vh"}} >
-            <Grid item>
+            <Grid item sm={3}>
             <div >
               <Button onClick = {() => this.props.setTab("SEARCH")}  variant="outlined" color="primary">
                 Search for Places
               </Button>
             </div>
             </Grid>
-            <Grid item>
+            <Grid item sm={3}>
               <Button variant="outlined" color="secondary">
                 Open Map
+              </Button>
+            </Grid>
+            <Grid item sm={3}>
+              <Button  onClick = {() => {this.props.setTab("EDIT")}} variant="contained" color="secondary">
+                Edit Profile
               </Button>
             </Grid>
         </Grid>

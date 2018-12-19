@@ -27,7 +27,7 @@ export default class SignIn extends Component {
 
   signUpUser = () => {
     console.log("signing up...")
-    let body = {user: {name: this.state.username, password: this.state.pw, password_confirmation: this.state.pwConfirmation, email:this.state.email} }
+    let body = {user: {name: this.state.username, password: this.state.pw, password_confirmation: this.state.pwConfirmation, email:this.state.emails} }
 
     fetch(API_URL.users,
       {method: "POST",
