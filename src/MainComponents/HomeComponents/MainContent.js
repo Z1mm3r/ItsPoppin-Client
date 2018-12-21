@@ -14,6 +14,7 @@ import Input from '@material-ui/core/Input';
 import DefaultContent from './MainContentComponents/DefaultContent'
 import SearchContent from './MainContentComponents/SearchContent'
 import EditProfile from './MainContentComponents/EditProfile.js'
+import MapContent from './MainContentComponents/MapContent'
 
 
 export default class MainContent extends Component {
@@ -33,6 +34,7 @@ export default class MainContent extends Component {
         {this.state.openTab == "DEFAULT" ? <DefaultContent setTab = {this.setTab} /> : null }
         {this.state.openTab == "SEARCH" ? <SearchContent userId = {this.props.userId} currentVisit = {this.props.currentVisit} checkedIn={this.props.checkedIn} checkedOut={this.props.checkedOut} token = {this.props.token} setTab = {this.setTab} /> : null}
         {this.state.openTab == "EDIT" ? <EditProfile token = {this.props.token} userId = {this.props.userId}/ > : null}
+        {this.state.openTab == "MAP" ? <MapContent token = {this.props.token} userId = {this.props.userId}/ > : null}
       </>
     )
   }

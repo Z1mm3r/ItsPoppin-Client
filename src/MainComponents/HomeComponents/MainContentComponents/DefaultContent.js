@@ -33,7 +33,7 @@ export default class DefaultContent extends Component {
             </div>
             </Grid>
             <Grid item sm={3}>
-              <Button variant="outlined" color="secondary">
+              <Button onClick = {() => {this.props.setTab("MAP")}} variant="outlined" color="secondary">
                 Open Map
               </Button>
             </Grid>
