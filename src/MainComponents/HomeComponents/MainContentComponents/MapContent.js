@@ -7,6 +7,10 @@ const Map = ReactMapBoxGl({
   accessToken: API_KEYS.MAP_BOX_PUBLIC
 })
 
+
+
+
+
 export default class MapContent extends Component {
 
   componentDidMount(){
